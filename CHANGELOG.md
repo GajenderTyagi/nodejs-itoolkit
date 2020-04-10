@@ -2,6 +2,83 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.0.0 (2020-04-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* Remove iSql.connect() and iSql.setOptions()
+* Remove iConn.setTimeout()
+
+### Features
+
+* Allow DS for service program return value ([#217](https://github.com/IBM/nodejs-itoolkit/issues/217)) ([30e9f8a](https://github.com/IBM/nodejs-itoolkit/commit/30e9f8a69da829935dcee72dbd394032feef0e27))
+
+
+### Bug Fixes
+
+* minimist CVE ([#231](https://github.com/IBM/nodejs-itoolkit/issues/231)) ([6d02c43](https://github.com/IBM/nodejs-itoolkit/commit/6d02c43c38cf3c5fcc2e5ee559ea123ba97b12f2))
+* **idb:** Improve cleanup handling ([#233](https://github.com/IBM/nodejs-itoolkit/issues/233)) ([c2bb115](https://github.com/IBM/nodejs-itoolkit/commit/c2bb1152e13785a975597da41d6ca7df94bf4c09))
+* Add missing '?' in xml prolog ([bff8649](https://github.com/IBM/nodejs-itoolkit/commit/bff864991f73f5789c5dec563821c86eb1aab3fa))
+* data type issue in Toolkit.getSysStatus and Toolkit.getSysStatusExt ([#190](https://github.com/IBM/nodejs-itoolkit/issues/190)) ([15397c2](https://github.com/IBM/nodejs-itoolkit/commit/15397c279d51b9282ef948b7d61d7d403690ce6f))
+* Define errno structure correctly ([#192](https://github.com/IBM/nodejs-itoolkit/issues/192)) ([b1561f7](https://github.com/IBM/nodejs-itoolkit/commit/b1561f76e5803409c485f8b965745a060462852b)), closes [#191](https://github.com/IBM/nodejs-itoolkit/issues/191)
+* Faulty error thrown by ProgramCall.addParam ([#124](https://github.com/IBM/nodejs-itoolkit/issues/124)) ([75d081c](https://github.com/IBM/nodejs-itoolkit/commit/75d081c86ae35f0557ea7b5a1f8886018de6ff36))
+* Formatting errors in bug report template ([24a9262](https://github.com/IBM/nodejs-itoolkit/commit/24a92626e97f407dc7de998e2c65d6500d289eaf))
+* Improper TOC nesting in main README ([#175](https://github.com/IBM/nodejs-itoolkit/issues/175)) ([db5d44c](https://github.com/IBM/nodejs-itoolkit/commit/db5d44cdcc79dbded8d3fa6f0717ed268d5d7606))
+* Move iConn compatibility code to iConn itself ([#218](https://github.com/IBM/nodejs-itoolkit/issues/218)) ([73d798d](https://github.com/IBM/nodejs-itoolkit/commit/73d798deaf1ca840d2c0d5742ded40712fe33955))
+* Use encodeURIComponent for URL params ([2c98b22](https://github.com/IBM/nodejs-itoolkit/commit/2c98b229148adbc3475d2eba1c1f397cd7367447)), closes [#72](https://github.com/IBM/nodejs-itoolkit/issues/72) [#71](https://github.com/IBM/nodejs-itoolkit/issues/71)
+
+
+### Build System
+
+* Add CI workflow and default to unit tests ([#149](https://github.com/IBM/nodejs-itoolkit/issues/149)) ([877ca34](https://github.com/IBM/nodejs-itoolkit/commit/877ca3475a79f9debbe719a4b2b002d214ef0725)), closes [#144](https://github.com/IBM/nodejs-itoolkit/issues/144)
+* Add xml2js as a dependency ([739cb47](https://github.com/IBM/nodejs-itoolkit/commit/739cb4760d42894c3df815e8e61af35d328f4b39))
+* Update dep vers and add package-lock.json ([#146](https://github.com/IBM/nodejs-itoolkit/issues/146)) ([21d82f6](https://github.com/IBM/nodejs-itoolkit/commit/21d82f61d31b0a159dd9ac32254045ecd60ddb61))
+* use standard-version [#85](https://github.com/IBM/nodejs-itoolkit/issues/85) ([45f66a7](https://github.com/IBM/nodejs-itoolkit/commit/45f66a7f9ac5b5d37c907f5d088cb517cd4d3d66))
+
+
+### Clean up
+
+* Disable use of .connect and .setOptions in iSql ([0f77664](https://github.com/IBM/nodejs-itoolkit/commit/0f77664cdc6b4a1ea9c9084e2de6ba1eb8e3ab86))
+* Finish deprecating xmlToJson ([#164](https://github.com/IBM/nodejs-itoolkit/issues/164)) ([0d982a7](https://github.com/IBM/nodejs-itoolkit/commit/0d982a7fe3171e30df09108cf6b0a7ccfb4bfee8))
+* Move SqlCall into iSql ([7f9eef3](https://github.com/IBM/nodejs-itoolkit/commit/7f9eef36064bb4fda0efc4df8a2a98656cbbcc78))
+* Move SqlCallUnit into iSqlUnit ([7507b1a](https://github.com/IBM/nodejs-itoolkit/commit/7507b1af601abba75fac40837932002246451213))
+* Move xmlToJsonUnit into deprecated directory ([#130](https://github.com/IBM/nodejs-itoolkit/issues/130)) ([b9efa2e](https://github.com/IBM/nodejs-itoolkit/commit/b9efa2ea2da277f93eb78e58fe5e9c326e70650d))
+* Pass object to addParam in iDataQueue functions ([#183](https://github.com/IBM/nodejs-itoolkit/issues/183)) ([b98c8b5](https://github.com/IBM/nodejs-itoolkit/commit/b98c8b5fe17c95f6b6bb19074facccd797b7f04b))
+* Pass object to addParam in iNetwork functions ([#184](https://github.com/IBM/nodejs-itoolkit/issues/184)) ([eaa7cf4](https://github.com/IBM/nodejs-itoolkit/commit/eaa7cf4ec7a102071d73fdb5afa0607bb658a1e3))
+* Pass object to addParam in iObj functions ([#185](https://github.com/IBM/nodejs-itoolkit/issues/185)) ([b1668df](https://github.com/IBM/nodejs-itoolkit/commit/b1668df771059d17ec57b8ebfe7c8e3f974cad3a))
+* Pass object to addParam in iProd functions ([#186](https://github.com/IBM/nodejs-itoolkit/issues/186)) ([785ead3](https://github.com/IBM/nodejs-itoolkit/commit/785ead3b1f80e1f92a8b5ae9e7dc6e65a6544a54))
+* Pass object to addParam in iUserSpace functions ([#187](https://github.com/IBM/nodejs-itoolkit/issues/187)) ([a6835db](https://github.com/IBM/nodejs-itoolkit/commit/a6835db8c234f35896c0a35d1ec93fea52899d9d))
+* Pass object to addParam in iWork functions ([#188](https://github.com/IBM/nodejs-itoolkit/issues/188)) ([d5c62f2](https://github.com/IBM/nodejs-itoolkit/commit/d5c62f2ba09b036c38deaace415eb35beca5223a))
+* ProgramCall.addParam to accept an object ([#139](https://github.com/IBM/nodejs-itoolkit/issues/139)) ([376cc5a](https://github.com/IBM/nodejs-itoolkit/commit/376cc5a3cc61c7867686205c537ffcd67e34c8eb))
+* Remove iConn.setTimeout() ([c978c41](https://github.com/IBM/nodejs-itoolkit/commit/c978c41ad28f5e4db152bd4bd5e56ba3824ea650))
+* Remove iDataQueue functions From Toolkit  ([#210](https://github.com/IBM/nodejs-itoolkit/issues/210)) ([6ee690b](https://github.com/IBM/nodejs-itoolkit/commit/6ee690bc5f3dc2188f73105820bd36107e5d2c85))
+* Remove iNetwork functions From Toolkit ([#211](https://github.com/IBM/nodejs-itoolkit/issues/211)) ([1512b0d](https://github.com/IBM/nodejs-itoolkit/commit/1512b0d1f8b972724c3005eb60bf7a719eba4619))
+* Remove iObj functions from Toolkit ([#212](https://github.com/IBM/nodejs-itoolkit/issues/212)) ([4dbf343](https://github.com/IBM/nodejs-itoolkit/commit/4dbf343bcb695c358876ca2208667203376db706))
+* Remove iProd functions from Toolkit  ([#213](https://github.com/IBM/nodejs-itoolkit/issues/213)) ([d2865b6](https://github.com/IBM/nodejs-itoolkit/commit/d2865b668e8561df370b4f2b3e5723938d152008))
+* Remove iSql.connect() and iSql.setOptions() ([066e8ba](https://github.com/IBM/nodejs-itoolkit/commit/066e8ba43e0c68ff6165b4be8f1d00eac1242f38))
+* Remove iUserSpace functions from Toolkit ([#214](https://github.com/IBM/nodejs-itoolkit/issues/214)) ([f0fcc6f](https://github.com/IBM/nodejs-itoolkit/commit/f0fcc6f26be87ca519145342801e9461388aa62e))
+* Remove iWork from Toolkit  ([#215](https://github.com/IBM/nodejs-itoolkit/issues/215)) ([9f12b97](https://github.com/IBM/nodejs-itoolkit/commit/9f12b97da5a10596438f62c1ba2ae4aab50e5a26))
+* Remove ixml refs in CommandCall ([aa4ff34](https://github.com/IBM/nodejs-itoolkit/commit/aa4ff3484fa1b11f47c252a06b61ba5c184a9425))
+* Remove ixml refs in Connection ([594b9ae](https://github.com/IBM/nodejs-itoolkit/commit/594b9aed99c6a5bbda7237ac778696ec5f703def))
+* Remove ixml refs in ProgramCall ([3b0698f](https://github.com/IBM/nodejs-itoolkit/commit/3b0698f2098eecd9b0dc57317de4cfcbc48ca9aa))
+* Remove ixml refs in SqlCall ([#102](https://github.com/IBM/nodejs-itoolkit/issues/102)) ([82cb0d1](https://github.com/IBM/nodejs-itoolkit/commit/82cb0d13c3215a2025477c798606c1671c23e05c))
+* Remove ixml.js and ixmlUnit.js ([0485bc8](https://github.com/IBM/nodejs-itoolkit/commit/0485bc89fe228fa50362266121e6f70c290d5795))
+* Remove lib/utils.js ([#159](https://github.com/IBM/nodejs-itoolkit/issues/159)) ([f4af596](https://github.com/IBM/nodejs-itoolkit/commit/f4af59615f07bfd6f6ea795cdd9ac20ba1aee147))
+* Remove Toolkit.js ([#220](https://github.com/IBM/nodejs-itoolkit/issues/220)) ([95a421b](https://github.com/IBM/nodejs-itoolkit/commit/95a421baf69db2c70adfdb553d7766b0c22329ef))
+* Remove unsupported data and ds options ([#216](https://github.com/IBM/nodejs-itoolkit/issues/216)) ([a105641](https://github.com/IBM/nodejs-itoolkit/commit/a10564182cd5965c8fc2f7b76f4256bb4571f278))
+* Remove xmlToJson from command tests ([#127](https://github.com/IBM/nodejs-itoolkit/issues/127)) ([c10378c](https://github.com/IBM/nodejs-itoolkit/commit/c10378c9fafd5305990d5028f4ee7867346c50fb))
+* Remove xmlToJson from iSql tests ([#129](https://github.com/IBM/nodejs-itoolkit/issues/129)) ([6491698](https://github.com/IBM/nodejs-itoolkit/commit/649169891abdbe1e4bafb3e9b668eee05086c347))
+* Remove xmlToJson from program tests ([#128](https://github.com/IBM/nodejs-itoolkit/issues/128)) ([2325750](https://github.com/IBM/nodejs-itoolkit/commit/23257502f3c35521af9df4b183ead345d7191f48))
+* Remove xmlToJson from Toolkit data queue methods ([#131](https://github.com/IBM/nodejs-itoolkit/issues/131)) ([553b907](https://github.com/IBM/nodejs-itoolkit/commit/553b907e0005c7bb7bf3b1636a6c205a762e0455))
+* Remove xmlToJson from Toolkit network methods ([#132](https://github.com/IBM/nodejs-itoolkit/issues/132)) ([b9bde21](https://github.com/IBM/nodejs-itoolkit/commit/b9bde21bab6256662a2ac77c8757436c9c5aa2e8))
+* Remove xmlToJson from Toolkit object methods ([#133](https://github.com/IBM/nodejs-itoolkit/issues/133)) ([4ebe497](https://github.com/IBM/nodejs-itoolkit/commit/4ebe497bb43209accfc4134b913f5d38368a603a))
+* Remove xmlToJson from Toolkit product methods ([#134](https://github.com/IBM/nodejs-itoolkit/issues/134)) ([17f9dcb](https://github.com/IBM/nodejs-itoolkit/commit/17f9dcbeeabb6877be591bcc07a1aabe8800be18))
+* Remove xmlToJson from Toolkit user space methods ([#136](https://github.com/IBM/nodejs-itoolkit/issues/136)) ([6f1712d](https://github.com/IBM/nodejs-itoolkit/commit/6f1712d82b30d5c6b390bda98fa0e2c6af75e797))
+* Remove xmlToJson from Toolkit work methods ([#137](https://github.com/IBM/nodejs-itoolkit/issues/137)) ([8452887](https://github.com/IBM/nodejs-itoolkit/commit/845288766ab3fca85bea37eaa26c66a6ee6663ba))
+* Rename irest and istoredp transports ([#109](https://github.com/IBM/nodejs-itoolkit/issues/109)) ([47b2a87](https://github.com/IBM/nodejs-itoolkit/commit/47b2a874d0ca3b787039d15e995aa674bcdaa88c))
+* Rename SqlCallFunctional -> iSqlFunctional ([959ea0a](https://github.com/IBM/nodejs-itoolkit/commit/959ea0ac9227993367c1cc3a30865113a8defa04))
+
 ## [1.0.0-alpha.1](https://github.com/IBM/nodejs-itoolkit/compare/1.0.0-alpha.0...1.0.0-alpha.1) (2019-07-10)
 
 ### Bug Fixes
@@ -151,4 +228,3 @@ All notable changes to this project will be documented in this file. See [standa
 ### [0.1.5](https://github.com/IBM/nodejs-itoolkit/compare/0.1.4...0.1.5) (2019-01-08)
 
 ### 0.1.4 (2018-09-17)
-
